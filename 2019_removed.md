@@ -270,7 +270,15 @@ $k_3 = \frac{\min(k_1, |k_2|)}{\max(k_1, |k_2|)}. \tag{7.11}$
 
 Кривизна подобия (similarity curvature) \(\mathcal{J}(P)\) определяется следующим
 образом:
-$\mathcal{J}(P) = \begin{cases} (\kappa_3, 0), & \text{если } \kappa_1 \text{ и } \kappa_2 \text{ положительны} \\ (-\kappa_3, 0), & \text{если } \kappa_1 \text{ и } \kappa_2 \text{ отрицательны} \\ (0, \kappa_3), & \text{если знаки } \kappa_1 \text{ и } \kappa_2 \text{ различны и } |\kappa_2| \ge |\kappa_1| \\ (0, -\kappa_3), & \text{если знаки } \kappa_1 \text{ и } \kappa_2 \text{ различны и } |\kappa_1| > |\kappa_2| \end{cases} \tag{7.12}.$
+$
+\mathcal{J}(P) =
+\begin{cases}
+(k_3, 0), & \text{ если } k_1 \text{ и } k_2 \text{ положительны} \\
+(-k_3, 0), & \text{ если } k_1 \text{ и } k_2 \text{ отрицательны} \\
+(0, k_3), & \text{ если знаки } k_1 \text{ и } k_2 \text{ различны и } |k_2| > |k_1| \\
+(0, -k_3), & \text{ если знаки } k_1 \text{ и } k_2 \text{ различны и } |k_1| > |k_2| 
+\end{cases} \tag{7.12} 
+$
 
 Отметим, что $\mathcal{J}(P) \in \mathbb{R}^2.$
 
@@ -1065,6 +1073,7 @@ $\mathcal{Z}(u, v) = \frac{-i(u + \lambda_0 u^3) \mathcal{A}(u, v) - i(v + \lamb
 
 
 ---
+
 
 
 
