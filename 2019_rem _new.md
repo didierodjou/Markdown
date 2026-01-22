@@ -414,10 +414,7 @@ $$
 
 и, наконец,
 
-$$
-P = (d \cdot \cos \beta, d \cdot \sin \beta)
-$$
-(7.17)
+$P = (d \cdot \cos \beta, d \cdot \sin \beta)$ (7.17)
 
 в координатах $X_Z$ . Угол $\beta$ определяется по положению спроецированной (освещенной) точки $P$ в гипотетическом одномерном изображении.
 
@@ -505,12 +502,20 @@ $$
 
 Точка $P = (X, Y, Z)$ проецируется в точку $p_i i$ -го и в точку $p_j j$ -го изображения. Тем самым определены векторы диспаратности (виртуального сдвига)
 
-$$
-d_{ij} = p_i - p_j \quad \text{или} \quad d_{ji} = p_j - p_r.
-$$
+$d_{ij} = p_i - p_j \quad \text{или} \quad d_{ji} = p_j - p_r.$
 (7.20)
 
-Скалярная диспаратность $d_{ij} = d_{ji}$, по определению, равна модулю $||\mathbf{d}_{ij}||_2$ =  $d_2(p_i, p_j)$ вектора $\mathbf{d}_{ij}$ . Имеем $||\mathbf{d}_{ij}||_2$ =  $||\mathbf{d}_{ji}||_2$ .
+Скалярная диспаратность $d_{ij} = d_{ji}$, по определению, равна модулю (евклидовой норме) вектора $d_{ij}$:
+
+$$\[
+d_{ij} = \||\mathbf{d}_{ij}\||_2 = d_2(p_i, p_j).
+\]$$
+
+Таким образом, выполняется равенство:
+
+$$\[
+\||\mathbf{d}_{ij}\||_2 = \||\mathbf{d}_{ji}\||_2.
+\]$$
 
 **Диспаратность в канонической геометрии стереоскопической системы.** В этом случае мы имеем левое и правое изображения. Пиксель $p_L = (x_L, y)$ левого изображения соответствует пикселю $p_R = (x_R, y)$ правого изображения. Поскольку $x_R \leq x_L$ , диспаратность равна $x_L - x_R$ .
 
@@ -530,13 +535,20 @@ $$
 
 $X_s = \frac{b \cdot x_{uL}}{x_{uL} - x_{uR}}$ (7.22)
 
-Подставив это значение \( X_s \) в (7.21), получаем
+Подставив это значение $\( X_s \)$ в (7.21), получаем
 
-$Z_s = \frac{b \cdot f}{x_{uL} - x_{uR}}$ (7.23)
+$$
+Z_s = \frac{b \cdot f}{x_{uL} - x_{uR}}
+$$ 
+
+(7.23)
 
 Наконец, подставляя $Z_s$ в (6.4) или (6.5), получаем
 
-$Y_s = \frac{b \cdot y_u}{x_{uL} - x_{uR}}$ (7.24)
+$$
+Y_s = \frac{b \cdot y_u}{x_{uL} - x_{uR}}$$ 
+
+(7.24)
 
 где $y_u = y_{uL} = y_{uR}$ .
 
@@ -614,14 +626,17 @@ $$
 \cos(\theta) & 0 & \sin(\theta) \\
 0 & 1 & 0 \\
 -\sin(\theta) & 0 & \cos(\theta)
-\end{bmatrix} \tag{7.25}
+\end{bmatrix}
 $$
+
+(7.25)
 
 на угол $-\theta$ вокруг оси \(Y\) с последующим параллельным переносом
 $$
-\left[ X - \frac{b}{2}, Y, Z \right]^T, \tag{7.26}
+\left[ X - \frac{b}{2}, Y, Z \right]^T
 $$
 
+(7.26)
 ---
 
 322  Глава 7. Трехмерная реконструкция
@@ -644,9 +659,10 @@ Z_L
 X - \frac{b}{2} \\
 Y \\
 Z
-\end{bmatrix}. \tag{7.27}
+\end{bmatrix}
 $$
 
+(7.27)
 Аналогично
 
 $$\begin{bmatrix}
@@ -664,23 +680,34 @@ Z_R
 X + \frac{b}{2} \\
 Y \\
 Z
-\end{bmatrix}. \tag{7.28}
-$$
-Рассмотрим точку \( P = (X, Y, Z) \) в системе координат \( XYZ \), спроецированную в точки \( x_{uL} y_u \) и \( x_{uR} y_u \) в левой и правой системах координат соответственно. Согласно общим уравнениям центральной проекции:
-$$
-x_{uL} = \frac{f \cdot X_L}{Z_L}, \quad y_u = \frac{f \cdot Y_L}{Z_L} = \frac{f \cdot Y_R}{Z_R} \quad u \quad x_{uR} = \frac{f \cdot X_R}{Z_R}. \tag{7.29}
-$$
-Отсюда получаем
-$$
-x_{uL} = f \frac{\cos(\theta) \left( X - \frac{b}{2} \right) + \sin(\theta) \cdot Z}{- \sin(\theta) \left( X - \frac{b}{2} \right) + \cos(\theta) \cdot Z}, \tag{7.30}
+\end{bmatrix}
 $$
 
+(7.28)
+Рассмотрим точку $\( P = (X, Y, Z) \)$ в системе координат $\( XYZ \)$, спроецированную в точки $\( x_{uL} y_u \)$ и $\( x_{uR} y_u \)$ в левой и правой системах координат соответственно. Согласно общим уравнениям центральной проекции:
 $$
-y_u = f \frac{Y}{- \sin(\theta) \left( X - \frac{b}{2} \right) + \cos(\theta) \cdot Z}, \tag{7.31}
+x_{uL} = \frac{f \cdot X_L}{Z_L}, \quad y_u = \frac{f \cdot Y_L}{Z_L} = \frac{f \cdot Y_R}{Z_R} \quad u \quad x_{uR} = \frac{f \cdot X_R}{Z_R}
 $$
+
+(7.29)
+Отсюда получаем
 $$
-x_{uR} = f \frac{\cos(\theta) \left( X + \frac{b}{2} \right) - \sin(\theta) \cdot Z}{\sin(\theta) \left( X + \frac{b}{2} \right) + \cos(\theta) \cdot Z}. \tag{7.32}
+x_{uL} = f \frac{\cos(\theta) \left( X - \frac{b}{2} \right) + \sin(\theta) \cdot Z}{- \sin(\theta) \left( X - \frac{b}{2} \right) + \cos(\theta) \cdot Z}
 $$
+
+(7.30)
+
+$$
+y_u = f \frac{Y}{- \sin(\theta) \left( X - \frac{b}{2} \right) + \cos(\theta) \cdot Z}
+$$
+
+(7.31)
+
+$$
+x_{uR} = f \frac{\cos(\theta) \left( X + \frac{b}{2} \right) - \sin(\theta) \cdot Z}{\sin(\theta) \left( X + \frac{b}{2} \right) + \cos(\theta) \cdot Z}
+$$
+
+(7.32)
 
 Таким образом, получается следующая система уравнений:
 
@@ -691,6 +718,7 @@ $$
 + (x_{uL}\cos(\theta) - f\sin(\theta))\,Z
 = -\left(\frac{b}{2}x_{uL}\sin(\theta) + \frac{b}{2}f\right)
 $$
+
 (7.33)
 
 $$
@@ -1161,6 +1189,7 @@ $$ \begin{aligned}
 
 
 ---
+
 
 
 
