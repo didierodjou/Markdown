@@ -1019,9 +1019,12 @@ $$
 
 Раскрывая скобки в этом выражении, получаем:
 
-$\begin{aligned}\sum_{\Omega} \bigl[ & u^2 \mathcal{Z} \mathcal{Z}^* - i u \mathcal{Z} \mathcal{A}^* + i u \mathcal{Z}^* \mathcal{A} + \mathcal{A} \mathcal{A}^* + v^2 \mathcal{Z} \mathcal{Z}^* - i v \mathcal{Z} \mathcal{B}^* + i v \mathcal{Z}^* \mathcal{B} + \mathcal{B} \mathcal{B}^* \bigr] \\
-+ \lambda_0 \sum_{\Omega} \bigl[ & u^4 \mathcal{Z} \mathcal{Z}^* - i u^3 \mathcal{Z} \mathcal{A}^* + i u^3 \mathcal{Z}^* \mathcal{A} + u^2 \mathcal{A} \mathcal{A}^* + v^4 \mathcal{Z} \mathcal{Z}^* - i v^3\mathcal{Z} \mathcal{B}^* + i v^3 \mathcal{Z}^* \mathcal{B} + v^2 \mathcal{B} \mathcal{B}^* \bigr] \\
-+ \lambda_1 \sum_{\Omega} & (u^2 + v^2) \mathcal{Z} \mathcal{Z}^* + \lambda_2 \sum_{\Omega} (u^4 + 2 u^2 v^2 + v^4) \mathcal{Z} \mathcal{Z}^*,\end{aligned}
+$$
+\begin{aligned}
+& \sum_{\Omega} \bigl[ u^2 \mathcal{Z} \mathcal{Z}^* - i u \mathcal{Z} \mathcal{A}^* + i u \mathcal{Z}^* \mathcal{A} + \mathcal{A} \mathcal{A}^* + v^2 \mathcal{Z} \mathcal{Z}^* - i v \mathcal{Z} \mathcal{B}^* + i v \mathcal{Z}^* \mathcal{B} + \mathcal{B} \mathcal{B}^* \bigr] \\
+& + \lambda_0 \sum_{\Omega} \bigl[ u^4 \mathcal{Z} \mathcal{Z}^* - i u^3 \mathcal{Z} \mathcal{A}^* + i u^3 \mathcal{Z}^* \mathcal{A} + u^2 \mathcal{A} \mathcal{A}^* + v^4 \mathcal{Z} \mathcal{Z}^* - i v^3\mathcal{Z} \mathcal{B}^* + i v^3 \mathcal{Z}^* \mathcal{B} + v^2 \mathcal{B} \mathcal{B}^* \bigr] \\
+& + \lambda_1 \sum_{\Omega} (u^2 + v^2) \mathcal{Z} \mathcal{Z}^* + \lambda_2 \sum_{\Omega} (u^4 + 2 u^2 v^2 + v^4) \mathcal{Z} \mathcal{Z}^*
+\end{aligned}
 $$
 
 (7.66)
